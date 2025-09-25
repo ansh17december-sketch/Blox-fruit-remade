@@ -14,7 +14,6 @@
       flex-direction: column;
       align-items: center;
       padding: 14px 2vw 40px 2vw;
-      /* Default animated gradient with always-on smooth transition */
       background: linear-gradient(-45deg, #4ef3c0, #6c62e3, #ed47c4, #ff975a, #22e1ff);
       background-size: 600% 600%;
       animation: bgmove 18s ease-in-out infinite;
@@ -92,6 +91,10 @@
       width: 95vw;
       max-width: 440px;
     }
+    .card-link {
+      text-decoration: none;
+      display: block;
+    }
     .card-btn {
       display: flex;
       flex-direction: row;
@@ -110,12 +113,13 @@
       position: relative;
       overflow: hidden;
       backdrop-filter: blur(2px);
+      color: #fff;
     }
     @keyframes cardgradient {
       0% {background-position:0% 100%;}
       100% {background-position:100% 0%;}
     }
-    .card-btn:active, .card-btn.animating {
+    .card-btn.animating {
       animation: clicked 1.5s cubic-bezier(.17,.67,.83,.67);
       z-index: 10;
     }
@@ -189,48 +193,52 @@
   </style>
 </head>
 <body>
-  <a href="https://discord.gg/your-server-id" class="primary-action" target="_blank">Join Now for Latest Updates!</a>
+  <a href="https://discord.gg/5HhCDaBTA6" class="primary-action" target="_blank">Join Now for Latest Updates!</a>
   <div class="main-heading">BLOX FRUIT REMADE</div>
   <img class="heading-img" src="logo.jpg" alt="Main Banner" />
   <div class="card-list">
-    <div class="card-btn">
-      <img src="leak.jpg" class="card-img" alt="Leaks Icon" />
-      <div class="card-content">
-        <div class="card-title">Leaks</div>
-        <div class="card-info">Add your leaks, info or updates here. Make it descriptive and attractive for users!</div>
+    <a href="leaks.html" class="card-link">
+      <div class="card-btn">
+        <img src="leak.jpg" class="card-img" alt="Leaks Icon" />
+        <div class="card-content">
+          <div class="card-title">Leaks</div>
+          <div class="card-info">Add your leaks, info or updates here. Make it descriptive and attractive for users!</div>
+        </div>
       </div>
-    </div>
-    <div class="card-btn">
-      <img src="date.jpg" class="card-img" alt="Release Date Icon" />
-      <div class="card-content">
-        <div class="card-title">Release Date</div>
-        <div class="card-info">Put expected release schedule, teasers, or countdowns here for your users.</div>
+    </a>
+    <a href="date.html" class="card-link">
+      <div class="card-btn">
+        <img src="date.jpg" class="card-img" alt="Release Date Icon" />
+        <div class="card-content">
+          <div class="card-title">Release Date</div>
+          <div class="card-info">Put expected release schedule, teasers, or countdowns here for your users.</div>
+        </div>
       </div>
-    </div>
-    <div class="card-btn">
-      <img src="dev.jpg" class="card-img" alt="Owners & Devs Icon" />
-      <div class="card-content">
-        <div class="card-title">Owners &amp; Devs</div>
-        <div class="card-info">Introduce your team, owners, and developers here in this section card.</div>
+    </a>
+    <a href="devs.html" class="card-link">
+      <div class="card-btn">
+        <img src="dev.jpg" class="card-img" alt="Owners & Devs Icon" />
+        <div class="card-content">
+          <div class="card-title">Owners &amp; Devs</div>
+          <div class="card-info">Introduce your team, owners, and developers here in this section card.</div>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
   <div class="note">
     Join our futuristic Discord community for updates & support:<br>
-    <a href="https://discord.gg/your-server-id" class="discord-link" target="_blank">Discord Server</a>
+    <a href="https://discord.gg/5HhCDaBTA6" class="discord-link" target="_blank">Discord Server</a>
   </div>
   <script>
     // Animated bg: click anywhere on page to randomize gradient (with soft transition)
     document.body.addEventListener('click', function(e) {
       // Don't run if the click is on a button or a link.
       if(e.target.closest('.card-btn') || e.target.closest('a')) return;
-      // Use random colors for gradient stops
       function randomColor() {
         return `#${Math.floor(Math.random()*0xFFFFFF).toString(16).padStart(6,'0')}`;
       }
       const colors = [randomColor(), randomColor(), randomColor(), randomColor(), randomColor()];
       document.body.style.background = `linear-gradient(-45deg, ${colors.join(', ')})`;
-      // Re-trigger animation after a short delay to keep const color animation
       setTimeout(() => {
         document.body.style.animation = "bgmove 18s ease-in-out infinite";
         document.body.style.backgroundSize = "600% 600%";
