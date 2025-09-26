@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blox Fruit Remade — Leaks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Zilla+Slab:wght@600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height:100vh;
+      font-family:'Poppins','Orbitron','Roboto',sans-serif;
+      background:linear-gradient(110deg,#4ef3c0,#6c62e3,#ed47c4,#ff975a,#22e1ff);
+      background-size:400% 400%;
+      animation:bgmove 16s linear infinite;
+      color:#fff;
+    }
+    @keyframes bgmove {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100%{background-position:0% 50%;}
+    }
+    .container {
+      max-width:1020px;
+      margin:24px auto 0 auto;
+      padding:10px 0 32px 0;
+    }
+    .title {
+      text-align:center;
+      font-family:'Orbitron','Poppins',sans-serif;
+      font-weight:bold;
+      font-size:2rem;
+      margin-bottom:10px;
+      letter-spacing:1.2px;
+      background:linear-gradient(90deg,#8ae7ff,#d6abff,#ffa6e1);
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent;
+      text-shadow:0 2px 16px #5ffdff44;
+    }
+    .desc-box {
+      background:rgba(27,34,65,0.33);
+      color:#d2eaff;
+      border-radius:16px;
+      padding:18px;
+      font-size:1.12rem;
+      margin:0 auto 17px auto;
+      max-width:720px;
+      box-shadow:0 2px 14px #4066bf15;
+      font-family:'Zilla Slab','Roboto',serif;
+      line-height:1.55;
+      min-height:40px;
+      letter-spacing: 1px;
+      transition: background 1s;
+    }
+    .gallery-row {
+      display:flex;
+      flex-direction:row;
+      gap:20px;
+      overflow-x:auto;
+      padding:18px 0 16px 0;
+      scrollbar-width:thin;
+      scrollbar-color:#66f5ee80 #271c36;
+    }
+    .gallery-row::-webkit-scrollbar {
+      height:12px;
+      background:#271c36;
+      border-radius:12px;
+    }
+    .gallery-row::-webkit-scrollbar-thumb {
+      background:#66f5ee88;
+      border-radius:12px;
+    }
+    .gallery-img-card {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      background:#29194cda;
+      border-radius:15px;
+      box-shadow:0 6px 22px #10134e3a;
+      min-width:120px;
+      width:120px;
+      max-width:130px;
+      padding:13px 9px 10px 9px;
+      position:relative;
+      transition: box-shadow 0.18s;
+    }
+    .gallery-img-card:hover {
+      transform:scale(1.04) translateY(-3px);
+      box-shadow:0 15px 38px #4ef3c055;
+    }
+    .gallery-img {
+      width:100%;
+      aspect-ratio:9/16;
+      object-fit:cover;
+      border-radius:11px;
+      background:#19183a;
+      box-shadow:0 3px 15px #1115293a;
+      margin-bottom:7px;
+      cursor:pointer;
+      border:2.5px solid #19183a;
+      transition:border-color 0.18s;
+    }
+    .gallery-img:active, .gallery-img:focus {
+      border-color:#4ef3c0;
+    }
+    .img-caption {
+      text-align:center;
+      color:#d8ecfb;
+      font-size:1rem;
+      font-family:'Roboto',sans-serif;
+      margin-top:4px;
+      letter-spacing:0.7px;
+      text-shadow: 0 2px 12px #00154422;
+    }
+    .fullscreen-overlay {
+      position:fixed; left:0; top:0; width:100vw; height:100vh;
+      background:rgba(26,27,49, 0.97);
+      backdrop-filter:blur(7px);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      z-index:9999;
+      transition: opacity 0.17s;
+      opacity:0; pointer-events:none;
+    }
+    .fullscreen-overlay.visible {
+      opacity:1; pointer-events:auto;
+    }
+    .fullscreen-img {
+      width:100vw; height:70vh; max-width:100vw; max-height:81vh;
+      border-radius:20px;
+      box-shadow:0 7px 44px #19185287;
+      object-fit:cover;
+      background:#1d1a2f;
+      margin-bottom:15px;
+      border:3px solid #4ef3c0;
+      display:block;
+    }
+    .fullscreen-text {
+      /* Animated gradient background Each popup uses! */
+      background: linear-gradient(-70deg, #67fff7, #b768ff, #ff78c5, #8bf176, #62d3ff, #ed47c4, #ff975a, #4af3d0);
+      background-size: 600% 600%;
+      animation: notesbgmove 12s linear infinite alternate;
+      color: #fff9fd;
+      font-size: 1.17rem;
+      border-radius: 15px;
+      max-width: 670px;
+      width: 91vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 23px 17px 21px 17px;
+      font-family: 'Poppins','Orbitron','Roboto',sans-serif;
+      margin-bottom: 25px;
+      line-height: 1.6;
+      text-align: center;
+      box-shadow: 0 2px 24px #d17cff25, 0 2px 14px #61f7e012;
+      letter-spacing: 1.2px;
+      font-weight: 600;
+      text-shadow: 0 2px 16px #45133533, 0 1.5px 7px #64ffd822;
+      border: 2.2px solid #22e1ff33;
+      transition: background 1s;
+    }
+    @keyframes notesbgmove {
+      0% {background-position:0% 50%;}
+      30% {background-position:60% 47%;}
+      60% {background-position:100% 100%;}
+      100%{background-position:0% 50%;}
+    }
+    .close-btn {
+      background:linear-gradient(94deg,#6df3ff 25%,#ed47c4 100%);
+      color:#fff;
+      border:none; border-radius:13px;
+      font-size:1.13rem; padding:12px 44px;
+      font-family:'Orbitron','Roboto',sans-serif;
+      font-weight: bold; cursor:pointer;
+      box-shadow:0 2px 17px #4ef3c055; margin-bottom:10px;
+      transition:filter 0.21s, background 0.17s;
+      letter-spacing: 1.1px;
+    }
+    .close-btn:hover {
+      filter:brightness(1.13);
+      background:linear-gradient(100deg,#4ef3c0 70%,#ed47c4 100%);
+    }
+    @media (max-width:700px){
+      .fullscreen-img {height:50vh;}
+      .fullscreen-text {font-size:1.03rem;padding:14px 4px;}
+    }
+    @media (max-width:430px){
+      .fullscreen-img {height:35vh;}
+      .fullscreen-text {font-size:0.96rem;}
+      .close-btn {font-size:0.95rem; padding:9px 21px;}
+    }
+    .back-btn {
+      display:inline-block;
+      margin:0 0 14px 10px;
+      padding:8px 21px;
+      background:linear-gradient(80deg, #ff90d7 55%, #4ef3c0 100%);
+      color:#fff; font-size:1rem;
+      font-family:'Orbitron','Roboto',sans-serif;
+      border:none; border-radius:14px; cursor:pointer;
+      font-weight:bold; box-shadow:0 2px 14px #c577fa33;
+      text-decoration:none;
+      letter-spacing:1px; transition:filter 0.17s, transform 0.13s;
+    }
+    .back-btn:hover {
+      filter:brightness(1.08); transform:scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-btn">&larr; Back</a>
+    <div class="title">Latest Leaks & Sneak Peeks</div>
+    <div class="desc-box">
+      <!-- Your description here. You can customize fonts, colors, etc as needed! -->
+      Write any news or update about BLOX FRUIT REMADE leaks in this box! The font and background are easy to change. Share bold announcements, credits, or project updates here.
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-img-card">
+        <img src="pic1.jpg" class="gallery-img" alt="Leak 1" onclick="showFullscreen(1)">
+        <div class="img-caption">Leak #1</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic2.jpg" class="gallery-img" alt="Leak 2" onclick="showFullscreen(2)">
+        <div class="img-caption">Leak #2</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic3.jpg" class="gallery-img" alt="Leak 3" onclick="showFullscreen(3)">
+        <div class="img-caption">Leak #3</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic4.jpg" class="gallery-img" alt="Leak 4" onclick="showFullscreen(4)">
+        <div class="img-caption">Leak #4</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic5.jpg" class="gallery-img" alt="Leak 5" onclick="showFullscreen(5)">
+        <div class="img-caption">Leak #5</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic6.jpg" class="gallery-img" alt="Leak 6" onclick="showFullscreen(6)">
+        <div class="img-caption">Leak #6</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic7.jpg" class="gallery-img" alt="Leak 7" onclick="showFullscreen(7)">
+        <div class="img-caption">Leak #7</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic8.jpg" class="gallery-img" alt="Leak 8" onclick="showFullscreen(8)">
+        <div class="img-caption">Leak #8</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic9.jpg" class="gallery-img" alt="Leak 9" onclick="showFullscreen(9)">
+        <div class="img-caption">Leak #9</div>
+      </div>
+      <div class="gallery-img-card">
+        <img src="pic10.jpg" class="gallery-img" alt="Leak 10" onclick="showFullscreen(10)">
+        <div class="img-caption">Leak #10</div>
+      </div>
+    </div>
+    <div id="fullscreen" class="fullscreen-overlay">
+      <img id="fullscreen-img" src="pic1.jpg" alt="Leak Fullscreen" class="fullscreen-img">
+      <div id="fullscreen-text" class="fullscreen-text"></div>
+      <button class="close-btn" onclick="closeFullscreen()">Close</button>
+    </div>
+  </div>
+  <script>
+    // Highly customizable messages for each photo popup!
+    var leakTexts = [
+      "🔥 Big Leak #1: Your description here! Add any styled text for this image. 🔥",
+      "🚀 Big Leak #2: Edit with any custom fonts, emojis, and color codes you want in this popup.",
+      "🌟 Big Leak #3: Write all info about the update, map, fruit or stat here!",
+      "💥 Big Leak #4: New secret? Add cool styled alerts and even credits here!",
+      "💎 Big Leak #5: Brief or long text, it's all your choice. ",
+      "🌈 Big Leak #6: Change this to anything you want! ",
+      "⚡ Big Leak #7: Share story updates, dev logs, or memes.",
+      "✨ Big Leak #8: Credit testers, team, or reveal a special cheat.",
+      "😱 Big Leak #9: Show event teasers, version hints, or tips.",
+      "🎉 Big Leak #10: Use the notes area for anything you want! "
+    ];
+    function showFullscreen(idx) {
+      document.getElementById('fullscreen-img').src = "pic" + idx + ".jpg";
+      document.getElementById('fullscreen-text').textContent = leakTexts[idx-1];
+      document.getElementById('fullscreen').classList.add('visible');
+      document.body.style.overflow = "hidden";
+    }
+    function closeFullscreen() {
+      document.getElementById('fullscreen').classList.remove('visible');
+      document.body.style.overflow = "";
+    }
+    document.getElementById('fullscreen').addEventListener('click', function(e){
+      if(e.target === this) closeFullscreen();
+    });
+    window.addEventListener('keydown', function(e){
+      if(e.key === "Escape") closeFullscreen();
+    });
+  </script>
+</body>
+</html>
