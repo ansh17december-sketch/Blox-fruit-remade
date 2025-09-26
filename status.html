@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Server Status - BLOX FRUIT REMADE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(-45deg, #4ef3c0, #6c62e3, #ed47c4, #ff975a, #22e1ff);
+      background-size: 600% 600%;
+      animation: bgmove 18s ease-in-out infinite;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+      transition: color 1.2s ease-in-out;
+    }
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      25% {background-position: 70% 50%;}
+      50% {background-position: 100% 100%;}
+      75% {background-position: 30% 80%;}
+      100% {background-position: 0% 50%;}
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 24px;
+      text-shadow: 0 0 20px rgba(0,0,0,0.5);
+      background: linear-gradient(90deg, #ff975a, #21d4fd, #c250fb, #4ef3c0, #ed47c4);
+      background-size: 290% 290%;
+      animation: gradienttext 3s linear infinite alternate;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      transition: color 1.2s ease-in-out;
+    }
+    @keyframes gradienttext {
+      0% {background-position:0% 50%;}
+      100% {background-position:100% 50%;}
+    }
+    .status-note {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+      padding: 20px 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      box-shadow: 0 6px 30px rgba(255, 255, 255, 0.2);
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      animation: notebackground 18s ease-in-out infinite;
+      color: #fff;
+      background: linear-gradient(-45deg, #6c62e3, #ed47c4, #ff975a, #22e1ff, #4ef3c0);
+      background-size: 600% 600%;
+      transition: color 1.2s ease-in-out, background 1.2s ease-in-out;
+    }
+    @keyframes notebackground {
+      0% {background-position: 0% 50%;}
+      25% {background-position: 70% 50%;}
+      50% {background-position: 100% 100%;}
+      75% {background-position: 30% 80%;}
+      100% {background-position: 0% 50%;}
+    }
+    .status-symbols span {
+      font-size: 1.8rem;
+      margin: 0 15px;
+      display: inline-block;
+      vertical-align: middle;
+      user-select: none;
+      text-shadow: 0 0 6px rgba(0,0,0,0.7);
+    }
+    .server-status {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.8rem;
+      padding: 15px 25px;
+      border-radius: 20px;
+      max-width: 320px;
+      width: 100%;
+      margin: auto;
+      color: #fff;
+      background: linear-gradient(-45deg, #22e1ff, #4ef3c0, #6c62e3, #ed47c4, #ff975a);
+      background-size: 600% 600%;
+      animation: notebackground 18s ease-in-out infinite;
+      box-shadow: 0 6px 30px #00000060;
+      transition: color 1.2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>Server Status</h1>
+  <div class="status-note">
+    Status legend:<br />
+    <span>🟢 - Active</span>
+    <span>🟡 - Maintenance</span>
+    <span>🔴 - Down</span>
+  </div>
+
+  <!-- Change the class on this div to reflect actual server status -->
+  <div class="server-status active">
+    🔴The Server is Currently Not released And will be released Soon...
+  
+  </div>
+
+</body>
+</html>
