@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Owners & Devs - BLOX FRUIT REMADE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(-45deg, #4ef3c0, #6c62e3, #ed47c4, #ff975a, #22e1ff);
+      background-size: 600% 600%;
+      animation: bgmove 18s ease-in-out infinite;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 36px 16px 40px 16px;
+      text-align: center;
+    }
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      25% {background-position: 70% 50%;}
+      50% {background-position: 100% 100%;}
+      75% {background-position: 30% 80%;}
+      100% {background-position: 0% 50%;}
+    }
+    .dev-img {
+      /* Image above heading */
+      width: 94px;
+      height: 94px;
+      object-fit: cover;
+      border-radius: 19px;
+      margin-bottom: 17px;
+      box-shadow: 0 4px 32px #191c5037;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.3rem;
+      margin-bottom: 22px;
+      background: linear-gradient(90deg, #ff975a, #21d4fd, #c250fb, #4ef3c0, #ed47c4);
+      background-size: 290% 290%;
+      animation: gradienttext 3s linear infinite alternate;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    @keyframes gradienttext {
+      0% {background-position:0% 50%;}
+      100% {background-position:100% 50%;}
+    }
+    .roles-list {
+      max-width: 480px;
+      background: linear-gradient(-45deg, #6c62e3, #ed47c4, #ff975a, #22e1ff, #4ef3c0);
+      background-size: 600% 600%;
+      animation: rolesbg 18s ease-in-out infinite;
+      border-radius: 22px;
+      box-shadow: 0 8px 36px #00000044;
+      padding: 26px 10px 22px 10px;
+      margin-bottom: 24px;
+      overflow-y: auto;
+      transition: background 1.2s;
+    }
+    @keyframes rolesbg {
+      0% {background-position: 0% 50%;}
+      25% {background-position: 70% 50%;}
+      50% {background-position: 100% 100%;}
+      75% {background-position: 30% 80%;}
+      100% {background-position: 0% 50%;}
+    }
+    .role-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(20, 20, 40, 0.18);
+      margin: 7px auto;
+      padding: 10px 14px;
+      border-radius: 14px;
+      box-shadow: 0 3px 16px #3346781f;
+      font-size: 1.11rem;
+      letter-spacing: 0.8px;
+      font-family: 'Orbitron', 'Roboto', sans-serif;
+      max-width: 420px;
+      width: 100%;
+    }
+    .role-name {
+      color: #fff;
+      text-align: left;
+    }
+    .role-count {
+      color: #c3e4ff;
+      font-weight: bold;
+      text-align: right;
+      min-width: 58px;
+    }
+    @media (max-width: 540px) {
+      .dev-img {
+        width: 70px;
+        height: 70px;
+      }
+      h1 {
+        font-size: 1.45rem;
+      }
+      .role-card {
+        font-size: 0.98rem;
+        padding: 7px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Your developer image here -->
+  <img src="devlogo.jpg" alt="Dev Logo" class="dev-img" />
+  <!-- Example: <img src="1000108651.jpg" alt="Dev Logo" class="dev-img" /> -->
+  <h1>Owners & Devs</h1>
+  <div class="roles-list">
+    <div class="role-card"><span class="role-name">Bot</span><span class="role-count">13 members</span></div>
+    <div class="role-card"><span class="role-name">Owner</span><span class="role-count">2 members</span></div>
+    <div class="role-card"><span class="role-name">BloxLink</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Co Owner</span><span class="role-count">2 members</span></div>
+    <div class="role-card"><span class="role-name">Developer</span><span class="role-count">8 members</span></div>
+    <div class="role-card"><span class="role-name">Community Manager</span><span class="role-count">2 members</span></div>
+    <div class="role-card"><span class="role-name">Head Manager</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Manager</span><span class="role-count">2 members</span></div>
+    <div class="role-card"><span class="role-name">Support</span><span class="role-count">6 members</span></div>
+    <div class="role-card"><span class="role-name">HeadAdministrator2</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Administrator</span><span class="role-count">6 members</span></div>
+    <div class="role-card"><span class="role-name">Ticket Manager</span><span class="role-count">2 members</span></div>
+    <div class="role-card"><span class="role-name">Server Designer</span><span class="role-count">3 members</span></div>
+    <div class="role-card"><span class="role-name">Junior Moderator</span><span class="role-count">8 members</span></div>
+    <div class="role-card"><span class="role-name">Moderator</span><span class="role-count">4 members</span></div>
+    <div class="role-card"><span class="role-name">Server Boosts</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">PARTNER</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Content Creator</span><span class="role-count">2 members</span></div>
+    <div class="role-card"><span class="role-name">Early Supporter</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Member</span><span class="role-count">65 members</span></div>
+    <div class="role-card"><span class="role-name">Snack Peaks Ping</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Polls Ping</span><span class="role-count">12 members</span></div>
+    <div class="role-card"><span class="role-name">DJ-Bot</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Crown</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Wake UP</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Giveaway</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Bloxlink</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">[🎶] Music</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Equal To The Heaven</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Golem Bot</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Reaction Roles</span><span class="role-count">6 members</span></div>
+    <div class="role-card"><span class="role-name">Royale</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">TopGG</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">ProBot</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Nellord</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">📢ANNOUNCEMENT</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Ticket Tool</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">new role</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Giveaway Boat</span><span class="role-count">1 member</span></div>
+    <div class="role-card"><span class="role-name">Verified</span><span class="role-count">4 members</span></div>
+    <div class="role-card"><span class="role-name">821655203291874299</span><span class="role-count">verified 4 members</span></div>
+    <div class="role-card"><span class="role-name">@everyone</span><span class="role-count">134 members</span></div>
+  </div>
+</body>
+  </html>
+  
