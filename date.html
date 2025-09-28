@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Release Date - BLOX FRUIT REMADE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(-45deg, #4ef3c0, #6c62e3, #ed47c4, #ff975a, #22e1ff);
+      background-size: 600% 600%;
+      animation: bgmove 18s ease-in-out infinite;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    @keyframes bgmove {
+      0% {background-position: 0% 50%;}
+      25% {background-position: 70% 50%;}
+      50% {background-position: 100% 100%;}
+      75% {background-position: 30% 80%;}
+      100% {background-position: 0% 50%;}
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 28px;
+      text-shadow: 0 0 18px rgba(30,50,80,0.3);
+      background: linear-gradient(90deg, #ff975a, #21d4fd, #c250fb, #4ef3c0, #ed47c4);
+      background-size: 290% 290%;
+      animation: gradienttext 3s linear infinite alternate;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    @keyframes gradienttext {
+      0% {background-position:0% 50%;}
+      100% {background-position:100% 50%;}
+    }
+    .back-btn {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 12px 26px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(90deg, #4ef3c0, #ff975a, #22e1ff, #ed47c4);
+      background-size: 350% 350%;
+      animation: buttoncolor 7s linear infinite alternate;
+      color: #fff;
+      box-shadow: 0 6px 30px #181a4933, 0 1.5px 10px #7a80ff25;
+      transition: transform 0.15s;
+      margin-bottom: 38px;
+      align-self: flex-start;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
+    }
+    @keyframes buttoncolor {
+      0% {background-position:0% 50%;}
+      100% {background-position:100% 50%;}
+    }
+    .date-message {
+      font-size: 1.28rem;
+      line-height: 1.7;
+      margin: 0 auto 24px auto;
+      background: linear-gradient(-45deg, #6c62e3, #ed47c4, #ff975a, #22e1ff, #4ef3c0);
+      background-size: 600% 600%;
+      animation: messagebg 18s ease-in-out infinite;
+      color: #fff;
+      padding: 24px 36px;
+      border-radius: 22px;
+      box-shadow: 0 8px 36px #00000044;
+      max-width: 440px;
+      transition: color 1.2s, background 1.2s;
+      letter-spacing: 0.6px;
+      text-align: center;
+    }
+    @keyframes messagebg {
+      0% {background-position: 0% 50%;}
+      25% {background-position: 70% 50%;}
+      50% {background-position: 100% 100%;}
+      75% {background-position: 30% 80%;}
+      100% {background-position: 0% 50%;}
+    }
+    .image-gallery {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 22px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 600px;
+    }
+    .gallery-img {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 6px 22px #191c5037;
+      border: 2px solid #53e7ea88;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.25s;
+      background: #120b1e;
+      cursor: pointer;
+    }
+    .gallery-img:hover {
+      transform: scale(1.06) rotate(-1deg);
+      box-shadow: 0 8px 36px #c250fb55;
+      border-color: #ffffffc4;
+    }
+    @media (max-width: 540px) {
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+      .gallery-img {
+        width: 90vw;
+        height: 35vw;
+        max-width: 290px;
+        max-height: 110px;
+      }
+      .back-btn {
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="back-btn" onclick="history.back()">← Back</button>
+  <h1>Release Date</h1>
+  <div class="date-message">
+    The game is a little delayed and will be released in <strong>1-2 Days</strong>.<br>
+    Thank you for your patience and support!
+  </div>
+  <div class="image-gallery">
+    <img class="gallery-img" src="img1.jpg" alt="Preview 1" />
+    <img class="gallery-img" src="img2.jpg" alt="Preview 2" />
+    <img class="gallery-img" src="img3.jpg" alt="Preview 3" />
+  </div>
+</body>
+</html>
